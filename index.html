@@ -23,6 +23,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+
+		  <span id="key1"></span>
+		
 		
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T22WZCXW"
@@ -254,3 +257,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	</body>
 </html>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const key1 = urlParams.get('key1');
+    document.getElementById("key1").innerHTML = key1;
+</script>
