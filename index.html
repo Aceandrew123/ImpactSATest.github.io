@@ -2,7 +2,21 @@
 <!--
 	Drew's SA Test
 -->
-<html>
+<HTML>
+
+<script>
+
+	function addOrUpdateURLParam (key, value) {
+    const searchParams = new URLSearchParams(window.location.search)
+    searchParams.set(key, value)
+    const newRelativePathQuery = window.location.pathname + "?" + searchParams.toString()
+    history.pushState(null, "", newRelativePathQuery)
+}
+    addOrUpdateURLParam("Key1")
+    addOrUpdateURLParam("Key2")
+	    
+<script>
+	
 	<head>
 		
 		<!-- Google Tag Manager -->
@@ -239,19 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 
 		</div>
-
-<script>
-
-	function addOrUpdateURLParam (key, value) {
-    const searchParams = new URLSearchParams(window.location.search)
-    searchParams.set(key, value)
-    const newRelativePathQuery = window.location.pathname + "?" + searchParams.toString()
-    history.pushState(null, "", newRelativePathQuery)
-}
-    addOrUpdateURLParam("Key1")
-    addOrUpdateURLParam("Key2")
-	    
-<script> 
+ 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
